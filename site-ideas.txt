@@ -1,0 +1,4 @@
+Ideas for site functionality add-on's
+* Search Bar
+* Sort Functionality
+* Student Pages linked from Directory Cards -- Fully Customized by each student, could include a project spec on what they're working on or an article / blog post on an issue they're passionate about
