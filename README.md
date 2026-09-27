@@ -101,7 +101,7 @@ The page loads files with JavaScript's `fetch()`. For security reasons, browsers
  
 **VS Code:** Install the **Live Server** extension, right-click `index.html`, and choose **Open with Live Server**.
  
-**Python** (already installed on most Macs):
+**Python**:
  
 ```bash
 cd class-of-2027
