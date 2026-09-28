@@ -17,7 +17,7 @@ Each student's card information lives in its own JSON file. When the page loads,
 The manifest is needed because a web browser can't look inside a folder and list the files. Someone has to tell it which files to load.
  
 ```
-class-of-2027/
+INTA-CS-Seniors-2027/
 ├── README.md
 ├── index.html                  ← the page: HTML, CSS, and JavaScript
 ├── images/                     ← (optional, create it) student photos go here
