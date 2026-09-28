@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Class of 2027 Directory | In-Tech Academy</title>
+    <meta
+      name="description"
+      content="Meet the In-Tech Academy Computer Science Class of 2027."
+    />
+    <meta name="color-scheme" content="light dark" />
+
+    <style>
+      :root {
+        --royal: #4b2582;
+        --royal-deep: #2e1552;
+        --gold: #f2c230;
+        --gold-deep: #7a5a00;
+
+        --bg: #faf7fd;
+        --surface: #ffffff;
+        --text: #1f1530;
+        --text-muted: #4f4463;
+        --border: #d9cfe8;
+        --link: var(--royal);
+        --focus: var(--royal);
+        --label: var(--gold-deep);
+        --avatar-bg: var(--royal);
+        --avatar-text: var(--gold);
+        --default-photo-bg: #f3eefa;
+        --warn-bg: #fff6d6;
+        --warn-border: #7a5a00;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #150c22;
+          --surface: #221537;
+          --text: #f4effa;
+          --text-muted: #cdc2de;
+          --border: #4a3968;
+          --link: var(--gold);
+          --focus: var(--gold);
+          --label: var(--gold);
+          --avatar-bg: var(--royal);
+          --avatar-text: var(--gold);
+          --default-photo-bg: #150c22;
+          --warn-bg: #2f2410;
+          --warn-border: var(--gold);
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      a {
+        color: var(--link);
+        text-underline-offset: 0.2em;
+      }
+
+      :focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .visually-hidden {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: -100px;
+        z-index: 100;
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0.5rem 1rem;
+        background: var(--gold);
+        color: #1f1530;
+        font-weight: 700;
+        border-radius: 6px;
+      }
+      .skip-link:focus {
+        top: 1rem;
+      }
+      .skip-link:focus-visible {
+        outline-color: #1f1530;
+      }
+
+      @font-face {
+        font-family: "Graduate";
+        src: url("fonts/graduate.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      .site-header,
+      .site-footer {
+        --trim: linear-gradient(
+          var(--gold) 0 8px,
+          var(--royal) 8px 12px,
+          var(--gold) 12px 15px
+        );
+        --varsity: "Graduate", Rockwell, "Roboto Slab", Georgia, serif;
+        background: var(--royal-deep);
+        color: #ffffff;
+      }
+
+      .site-header {
+        position: relative;
+        overflow: hidden;
+        padding-block: 2.25rem calc(2.25rem + 15px);
+        padding-inline: 1rem;
+      }
+
+      .site-header::after,
+      .site-footer::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 15px;
+        background: var(--trim);
+      }
+      .site-header::after {
+        bottom: 0;
+      }
+      .site-footer::before {
+        top: 0;
+        transform: scaleY(-1);
+      }
+
+      .masthead {
+        max-width: 75rem;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: clamp(1rem, 3vw, 2rem);
+      }
+
+      .patch {
+        flex: none;
+        display: grid;
+        place-items: center;
+        width: clamp(4.75rem, 14vw, 7rem);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 4px solid var(--gold);
+        box-shadow:
+          0 0 0 4px var(--royal-deep),
+          0 0 0 7px var(--gold);
+      }
+      .patch img {
+        width: 74%;
+        height: auto;
+      }
+
+      .masthead-text {
+        min-width: 0;
+      }
+
+      .masthead .school {
+        margin: 0;
+        color: var(--gold);
+        font-weight: 700;
+        font-size: 0.85rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .site-header h1 {
+        margin: 0.15rem 0 0;
+        font-family: var(--varsity);
+        font-weight: 400;
+        line-height: 0.95;
+        text-wrap: balance;
+      }
+      .site-header h1 .class-of {
+        display: block;
+        font-size: clamp(1.1rem, 3vw, 1.5rem);
+        letter-spacing: 0.08em;
+        color: #ece4f7;
+      }
+      .site-header h1 .year {
+        display: block;
+        font-size: clamp(3rem, 11vw, 5.5rem);
+        color: var(--gold);
+        text-shadow: 3px 3px 0 var(--royal);
+      }
+
+      .site-header .tagline {
+        margin: 0.6rem 0 0;
+        max-width: 38rem;
+        color: #ece4f7;
+        font-size: 1.05rem;
+      }
+
+      .jersey {
+        margin: 0 0 0 auto;
+        font-family: var(--varsity);
+        font-size: clamp(6rem, 14vw, 11rem);
+        line-height: 1;
+        color: transparent;
+        -webkit-text-stroke: 2px rgb(242 194 48 / 0.55);
+        user-select: none;
+      }
+
+      @media (max-width: 48rem) {
+        .jersey {
+          display: none;
+        }
+      }
+
+      @media (max-width: 30rem) {
+        .masthead {
+          align-items: flex-start;
+        }
+      }
+
+      main {
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+      }
+
+      .status {
+        margin: 0 0 1.5rem;
+        color: var(--text-muted);
+        font-weight: 600;
+      }
+
+      .problems {
+        margin: 0 0 2rem;
+        padding: 1rem 1.25rem;
+        background: var(--warn-bg);
+        border: 2px solid var(--warn-border);
+        border-left-width: 8px;
+        border-radius: 8px;
+      }
+      .problems h2 {
+        margin: 0 0 0.5rem;
+        font-size: 1.15rem;
+      }
+      .problems p {
+        margin: 0 0 0.5rem;
+      }
+      .problems ul {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+      .problems li + li {
+        margin-top: 0.25rem;
+      }
+      .problems code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-weight: 700;
+        overflow-wrap: anywhere;
+      }
+
+      .directory {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+        gap: 1.5rem;
+      }
+
+      .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-top: 6px solid var(--gold);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgb(0 0 0 / 0.08);
+        transition:
+          transform 150ms ease,
+          box-shadow 150ms ease;
+      }
+
+      .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgb(0 0 0 / 0.14);
+      }
+
+      .card-photo {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        background: var(--border);
+      }
+
+      .card-photo.is-default {
+        object-fit: contain;
+        padding: 18%;
+        background: var(--default-photo-bg);
+      }
+
+      .card-initials {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--avatar-bg);
+        color: var(--avatar-text);
+        font-size: clamp(3rem, 12vw, 5rem);
+        font-weight: 800;
+        letter-spacing: 0.05em;
+      }
+
+      .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.25rem;
+      }
+
+      .card-name {
+        margin: 0;
+        font-size: 1.35rem;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+      }
+
+      .card-quote {
+        margin: 0;
+        padding-left: 0.9rem;
+        border-left: 4px solid var(--gold);
+        font-style: italic;
+        color: var(--text);
+        overflow-wrap: anywhere;
+      }
+      .card-quote p {
+        margin: 0;
+      }
+
+      .card-facts {
+        margin: 0;
+      }
+      .card-facts div + div {
+        margin-top: 0.6rem;
+      }
+      .card-facts dt {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--label);
+      }
+      .card-facts dd {
+        margin: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .card-link {
+        margin-top: auto;
+        align-self: flex-start;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        min-height: 44px;
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--link);
+        border-radius: 999px;
+        color: var(--link);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .card-link:hover {
+        background: var(--link);
+        color: var(--surface);
+      }
+
+      .site-footer {
+        position: relative;
+        margin-top: 1rem;
+        padding-block: calc(15px + 2rem) 2rem;
+        padding-inline: 1rem;
+        font-size: 0.95rem;
+      }
+
+      .footer-inner {
+        max-width: 75rem;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.25rem 2.5rem;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .footer-brand .patch {
+        width: 3.5rem;
+        border-width: 3px;
+        box-shadow: none;
+      }
+
+      .site-footer p {
+        margin: 0;
+        line-height: 1.45;
+      }
+
+      .site-footer .footer-school {
+        font-family: var(--varsity);
+        font-size: 1.15rem;
+        color: var(--gold);
+      }
+
+      .site-footer .footer-course {
+        color: #ece4f7;
+      }
+
+      .back-to-top {
+        margin-left: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        min-height: 44px;
+        padding: 0.5rem 1.1rem;
+        border: 2px solid var(--gold);
+        border-radius: 999px;
+        color: var(--gold);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .back-to-top:hover {
+        background: var(--gold);
+        color: var(--royal-deep);
+      }
+      .site-footer :focus-visible {
+        outline-color: var(--gold);
+      }
+
+      @media (max-width: 40rem) {
+        .back-to-top {
+          margin-left: 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition: none !important;
+          animation: none !important;
+          scroll-behavior: auto !important;
+        }
+        .card:hover {
+          transform: none;
+        }
+      }
+
+      @media (forced-colors: active) {
+        .card,
+        .problems,
+        .card-link {
+          border-color: CanvasText;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#directory-heading">Skip to student directory</a>
+
+    <header class="site-header" id="top">
+      <div class="masthead">
+        <div class="patch" hidden>
+          <img
+            src="images/default-panther.png"
+            alt=""
+            width="358"
+            height="360"
+          />
+        </div>
+        <div class="masthead-text">
+          <p class="school">In-Tech Academy · Computer Science</p>
+          <h1>
+            <span class="class-of">Class of</span>
+            <span class="year">2027</span>
+          </h1>
+          <p class="tagline">
+            Directory of Senior Practicum's Software Development Students
+          </p>
+        </div>
+        <p class="jersey" aria-hidden="true">’27</p>
+      </div>
+    </header>
+
+    <main id="main">
+      <h2 id="directory-heading" class="visually-hidden" tabindex="-1">
+        Student directory
+      </h2>
+
+      <p id="status" class="status" role="status" aria-live="polite">
+        Loading the student directory…
+      </p>
+
+      <section
+        id="problems"
+        class="problems"
+        aria-labelledby="problems-heading"
+        hidden
+      ></section>
+
+      <ul
+        id="directory"
+        class="directory"
+        aria-labelledby="directory-heading"
+      ></ul>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="patch" hidden>
+            <img
+              src="images/default-panther.png"
+              alt=""
+              width="358"
+              height="360"
+            />
+          </div>
+          <div>
+            <p class="footer-school">In-Tech Academy</p>
+            <p class="footer-course">Computer Science Program</p>
+          </div>
+        </div>
+        <p class="footer-course">
+          Senior Practicum: Software Development<br />School Year 2026–27
+        </p>
+        <a class="back-to-top" href="#top"
+          >Back to top <span aria-hidden="true">↑</span></a
+        >
+      </div>
+    </footer>
+
+    <script>
+      const STUDENTS_FOLDER = "students/";
+      const MANIFEST_PATH = STUDENTS_FOLDER + "manifest.json";
+      const DEFAULT_PHOTO = "images/default-panther.png";
+
+      const REQUIRED_KEYS = ["name", "quote", "onRepeat", "watching"];
+
+      const FILE_NAME_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*\.json$/;
+
+      const statusEl = document.getElementById("status");
+      const problemsEl = document.getElementById("problems");
+      const directoryEl = document.getElementById("directory");
+
+      const problems = [];
+
+      showMascotIfFound();
+
+      if (window.location.protocol === "file:") {
+        showNeedsServer();
+      } else {
+        loadDirectory();
+      }
+
+      async function loadDirectory() {
+        let fileNames;
+        try {
+          fileNames = await loadManifest();
+        } catch (error) {
+          statusEl.textContent =
+            "Couldn't load " + MANIFEST_PATH + ". " + error.message;
+          return;
+        }
+
+        if (fileNames.length === 0) {
+          statusEl.textContent =
+            "No students yet. Add file names to " + MANIFEST_PATH + ".";
+          return;
+        }
+
+        statusEl.textContent = "Loading " + fileNames.length + " students…";
+
+        const results = await Promise.allSettled(fileNames.map(loadStudent));
+
+        let shown = 0;
+        results.forEach(function (result, index) {
+          const file = fileNames[index];
+          if (result.status === "fulfilled") {
+            directoryEl.appendChild(buildCard(result.value, file));
+            shown++;
+          } else {
+            problems.push({ file: file, message: result.reason.message });
+          }
+        });
+
+        showProblems();
+        announceFinished(shown);
+      }
+
+      async function loadManifest() {
+        let response;
+        try {
+          response = await fetch(MANIFEST_PATH, { cache: "no-cache" });
+        } catch {
+          throw new Error("The server couldn't be reached.");
+        }
+        if (!response.ok) {
+          throw new Error("File not found (" + response.status + ").");
+        }
+
+        let manifest;
+        try {
+          manifest = await response.json();
+        } catch {
+          throw new Error(
+            "It's not valid JSON. Check commas and quotation marks.",
+          );
+        }
+
+        if (!manifest || !Array.isArray(manifest.students)) {
+          throw new Error('It needs a "students" list.');
+        }
+
+        return manifest.students
+          .filter(function (entry) {
+            if (typeof entry === "string" && entry.trim() !== "") return true;
+            problems.push({
+              file: "manifest.json",
+              message:
+                "has an entry that isn't a file name: " + JSON.stringify(entry),
+            });
+            return false;
+          })
+          .map(function (entry) {
+            return entry.trim();
+          });
+      }
+
+      async function loadStudent(file) {
+        if (!FILE_NAME_PATTERN.test(file)) {
+          throw new Error(
+            "file name should use only lowercase letters, numbers, and hyphens, and end in .json",
+          );
+        }
+
+        let response;
+        try {
+          response = await fetch(STUDENTS_FOLDER + file, { cache: "no-cache" });
+        } catch {
+          throw new Error("couldn't reach the server");
+        }
+        if (!response.ok) {
+          throw new Error("file not found (" + response.status + ")");
+        }
+
+        let student;
+        try {
+          student = await response.json();
+        } catch {
+          throw new Error("not valid JSON — check commas and quotation marks");
+        }
+
+        if (!student || typeof student !== "object" || Array.isArray(student)) {
+          throw new Error(
+            "not valid JSON — the file should start with { and end with }",
+          );
+        }
+
+        const missing = REQUIRED_KEYS.filter(function (key) {
+          return typeof student[key] !== "string" || student[key].trim() === "";
+        });
+        if (missing.length > 0) {
+          throw new Error("missing " + missing.join(", "));
+        }
+
+        return student;
+      }
+
+      function buildCard(student, file) {
+        const name = student.name.trim();
+
+        const li = document.createElement("li");
+        const card = document.createElement("article");
+        card.className = "card";
+        card.setAttribute("aria-labelledby", idFor(file));
+        li.appendChild(card);
+
+        const photo = cleanText(student.photo);
+        const photoAlt = cleanText(student.photoAlt);
+        if (photo) {
+          if (!photoAlt) {
+            problems.push({
+              file: file,
+              message:
+                "has a photo but no photoAlt. Add a short description of the photo.",
+            });
+          }
+          card.appendChild(buildPhoto(photo, photoAlt, name, file));
+        } else {
+          card.appendChild(buildDefaultPhoto(name));
+        }
+
+        const body = document.createElement("div");
+        body.className = "card-body";
+        card.appendChild(body);
+
+        const heading = document.createElement("h3");
+        heading.className = "card-name";
+        heading.id = idFor(file);
+        heading.textContent = name;
+        body.appendChild(heading);
+
+        const quote = document.createElement("blockquote");
+        quote.className = "card-quote";
+        const quoteText = document.createElement("p");
+        quoteText.textContent = "“" + student.quote.trim() + "”";
+        quote.appendChild(quoteText);
+        body.appendChild(quote);
+
+        const facts = document.createElement("dl");
+        facts.className = "card-facts";
+        facts.appendChild(buildFact("On repeat", student.onRepeat.trim()));
+        facts.appendChild(
+          buildFact("Can't wait to finish", student.watching.trim()),
+        );
+        body.appendChild(facts);
+
+        const portfolio = cleanText(student.portfolio);
+        if (portfolio) {
+          if (isSafeLink(portfolio)) {
+            body.appendChild(buildPortfolioLink(portfolio, name));
+          } else {
+            problems.push({
+              file: file,
+              message:
+                "portfolio link should be a full link starting with https://",
+            });
+          }
+        }
+
+        return li;
+      }
+
+      function buildPhoto(src, alt, name, file) {
+        const img = document.createElement("img");
+        img.className = "card-photo";
+        img.src = src;
+        img.alt = alt;
+        img.width = 800;
+        img.height = 800;
+        img.loading = "lazy";
+        img.decoding = "async";
+
+        img.addEventListener(
+          "error",
+          function () {
+            img.replaceWith(buildDefaultPhoto(name));
+            problems.push({
+              file: file,
+              message:
+                "photo not found at " + src + " (names are case-sensitive)",
+            });
+            showProblems();
+          },
+          { once: true },
+        );
+
+        return img;
+      }
+
+      function buildDefaultPhoto(name) {
+        const img = document.createElement("img");
+        img.className = "card-photo is-default";
+        img.src = DEFAULT_PHOTO;
+        img.alt = "";
+        img.width = 800;
+        img.height = 800;
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.addEventListener(
+          "error",
+          function () {
+            img.replaceWith(buildInitials(name));
+          },
+          { once: true },
+        );
+        return img;
+      }
+
+      function buildInitials(name) {
+        const box = document.createElement("div");
+        box.className = "card-initials";
+        box.setAttribute("aria-hidden", "true");
+        box.textContent = initialsOf(name);
+        return box;
+      }
+
+      function buildFact(label, value) {
+        const group = document.createElement("div");
+        const dt = document.createElement("dt");
+        dt.textContent = label;
+        const dd = document.createElement("dd");
+        dd.textContent = value;
+        group.append(dt, dd);
+        return group;
+      }
+
+      function buildPortfolioLink(url, name) {
+        const link = document.createElement("a");
+        link.className = "card-link";
+        link.href = url;
+        link.append("View portfolio");
+        const whose = document.createElement("span");
+        whose.className = "visually-hidden";
+        whose.textContent = " of " + name;
+        link.appendChild(whose);
+        return link;
+      }
+
+      function announceFinished(shown) {
+        let message =
+          "Showing " + shown + (shown === 1 ? " student." : " students.");
+        if (problems.length > 0) {
+          message +=
+            " Some files need fixing. See the list above the directory.";
+        }
+        statusEl.classList.add("visually-hidden");
+        statusEl.textContent = message;
+      }
+
+      function showProblems() {
+        if (problems.length === 0) return;
+
+        problemsEl.replaceChildren();
+
+        const heading = document.createElement("h2");
+        heading.id = "problems-heading";
+        heading.textContent =
+          problems.length === 1
+            ? "1 problem found in student files"
+            : problems.length + " problems found in student files";
+
+        const intro = document.createElement("p");
+        intro.textContent =
+          'Every other card still loaded. See "When a card doesn\'t show up" in the README.';
+
+        const list = document.createElement("ul");
+        problems.forEach(function (problem) {
+          const item = document.createElement("li");
+          const code = document.createElement("code");
+          code.textContent = problem.file;
+          item.append(code, ": " + problem.message);
+          list.appendChild(item);
+        });
+
+        problemsEl.append(heading, intro, list);
+        problemsEl.hidden = false;
+      }
+
+      function showMascotIfFound() {
+        document.querySelectorAll(".patch").forEach(function (patch) {
+          const img = patch.querySelector("img");
+          function show() {
+            patch.hidden = false;
+          }
+          if (img.complete && img.naturalWidth > 0) {
+            show();
+          } else {
+            img.addEventListener("load", show, { once: true });
+          }
+        });
+      }
+
+      function showNeedsServer() {
+        statusEl.textContent =
+          "This page needs a local web server to load student files. " +
+          "Open it with VS Code Live Server, or run: python3 -m http.server 8000 " +
+          'and go to http://localhost:8000. See "Run it on your computer" in the README.';
+      }
+
+      function cleanText(value) {
+        return typeof value === "string" ? value.trim() : "";
+      }
+
+      function isSafeLink(url) {
+        try {
+          return new URL(url).protocol === "https:";
+        } catch {
+          return false;
+        }
+      }
+
+      function initialsOf(name) {
+        const parts = name.split(/\s+/).filter(Boolean);
+        const first = parts[0] ? parts[0][0] : "";
+        const last = parts.length > 1 ? parts[parts.length - 1][0] : "";
+        return (first + last).toUpperCase();
+      }
+
+      function idFor(file) {
+        return "student-" + file.replace(/\.json$/, "");
+      }
+    </script>
+  </body>
+</html>
